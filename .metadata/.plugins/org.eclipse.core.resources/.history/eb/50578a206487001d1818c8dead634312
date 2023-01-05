@@ -1,0 +1,33 @@
+package application;
+
+import java.util.Scanner;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Scanner entradaDados = new Scanner(System.in);
+
+		System.out.println("Quantos  numeros  você deseja digitar? ");
+		int quantidadeDigitos = entradaDados.nextInt();
+
+		int[] numeros = new int[quantidadeDigitos];
+
+		for (int i = 0; i < numeros.length; i++) {
+
+			System.out.println("Digite o " + (i + 1) + " numero: ");
+			numeros[i] = entradaDados.nextInt();
+		}
+
+		for (int i : numeros) {
+
+			if (i < 0) {
+				System.out.println(i);
+			}
+
+		}
+		for (int j = 0; j < numeros.length; j++) {
+			System.out.println("numero negativo digitado : "+ numeros[j]);
+		}
+	}
+}

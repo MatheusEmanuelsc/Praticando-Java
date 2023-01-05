@@ -1,0 +1,37 @@
+package application;
+
+import java.util.Scanner;
+
+import entities.Departamento;
+import entities.Funcionario;
+import entities.enums.nivelFuncionario;
+
+public class Program {
+
+	
+	public static void main(String[] args) {
+		
+		Scanner entradaDados = new Scanner(System.in);
+		
+		System.out.println("Qual o departamento? ");
+		String nomeDepartamento = entradaDados.nextLine();		
+		
+		System.out.println("Qual o nome do funcionario? ");
+		String nome = entradaDados.nextLine();
+		
+		System.out.println("Qual o nivel  do  funcionario? Junior,Pleno ou Senior:  ");
+		String nivel = entradaDados.nextLine();
+					
+		System.out.println("Qual salario base do  funcionario? ");
+		double salario= entradaDados.nextDouble();
+		
+		System.out.println("Quantos Contratos vocẽ deseja adicionar? ");
+		
+		nivelFuncionario  niv = nivelFuncionario.valueOf(nivel);
+		Departamento  departamento = new Departamento(nomeDepartamento);
+		Funcionario funcionario =new Funcionario(nome, niv, null, departamento);		
+		
+		entradaDados.close();
+		
+	}
+}

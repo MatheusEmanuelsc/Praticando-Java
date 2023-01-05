@@ -1,0 +1,5 @@
+package praticando13.model.entities;
+
+public class Conta {
+
+}

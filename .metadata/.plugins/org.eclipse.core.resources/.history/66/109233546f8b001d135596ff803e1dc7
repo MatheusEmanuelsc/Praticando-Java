@@ -1,0 +1,45 @@
+package entities;
+
+public class PessoaFisica extends Pessoa {
+
+	private Double gastoComSaude;
+	
+	private Double verificarRenda=20000D;
+	private Double taxaDeImposto;
+
+	public PessoaFisica(String nome, Double rendaAnual, Double gastoComSaude) {
+		super(nome, rendaAnual);
+		this.gastoComSaude = gastoComSaude;
+	}
+
+	public Double getGastoComSaude() {
+		return gastoComSaude;
+	}
+
+	public void setGastoComSaude(Double gastoComSaude) {
+		this.gastoComSaude = gastoComSaude;
+	}
+
+	
+	@Override
+	public Double calculoImposto() {
+		
+		if (getRendaAnual()<verificarRenda) {
+			taxaDeImposto=0.15;
+			Double imposto=getRendaAnual()*taxaDeImposto;
+			return imposto;
+		} else {
+
+		}
+		return null;
+	}
+	@Override
+	public String toString() {
+		return "PessoaFisica [gastoComSaude=" + gastoComSaude + "]";
+	}
+
+	
+	
+	
+	
+}

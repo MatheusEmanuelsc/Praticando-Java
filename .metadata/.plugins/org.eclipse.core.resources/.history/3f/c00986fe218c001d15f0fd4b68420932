@@ -1,0 +1,5 @@
+package praticando13.model.exception;
+
+public class SemSaldoException extends Exception {
+
+}

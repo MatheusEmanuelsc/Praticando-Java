@@ -1,0 +1,48 @@
+package entities;
+
+public class PessoaJuridica extends Pessoa{
+
+	private Integer numeroDeFuncionarios;
+	
+
+	
+	public PessoaJuridica(String nome, Double rendaAnual, Integer numeroDeFuncionarios) {
+		super(nome, rendaAnual);
+		this.numeroDeFuncionarios = numeroDeFuncionarios;
+	}
+
+	public Integer getNumeroDeFuncionarios() {
+		return numeroDeFuncionarios;
+	}
+
+	public void setNumeroDeFuncionarios(Integer numeroDeFuncionarios) {
+		this.numeroDeFuncionarios = numeroDeFuncionarios;
+	}
+	
+	
+	@Override
+	public Double calculoImposto() {
+		
+		if (getNumeroDeFuncionarios()>10) {
+		
+			Double  imposto= getRendaAnual()*1.14;
+			return imposto;
+			
+		} else {
+			Double  imposto= getRendaAnual()*1.16;
+			return imposto;
+		}
+
+	}
+
+	@Override
+	public String toString() {
+		return "PessoaJuridica [numeroDeFuncionarios=" + numeroDeFuncionarios + "]";
+	}
+
+	
+	
+	
+	
+	
+}

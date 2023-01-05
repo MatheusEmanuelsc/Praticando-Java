@@ -1,0 +1,11 @@
+package praticando13.model.exception;
+
+public class NaoPodeSaqueOuRetiradaZeroValor extends Exception {
+
+	private static final long serialVersionUID = 1L;
+	
+	public NaoPodeSaqueOuRetiradaZeroValor(String msg) {
+		super(msg);
+	}
+
+}

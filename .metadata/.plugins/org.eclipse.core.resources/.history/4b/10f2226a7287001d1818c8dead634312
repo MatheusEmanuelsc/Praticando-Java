@@ -1,0 +1,34 @@
+package application;
+
+import java.util.Scanner;
+
+import entities.Pessoa;
+
+public class Program {
+	public static void main(String[] args) {
+		
+		
+		Scanner entradaDados = new Scanner(System.in);
+
+		System.out.println("Quantass  pessoas   você deseja adcionar? ");
+		int quantidadePessoas = entradaDados.nextInt();
+
+		Pessoa[] pessoa = new Pessoa[quantidadePessoas];
+
+		for (int i = 0; i < pessoa.length; i++) {
+
+			System.out.println("Digite o nome "+i+ " : ");
+			String  nome = entradaDados.nextLine();
+			
+			System.out.println("Digite a idade "+i+ " : ");
+			int idade = entradaDados.nextInt();
+			
+			System.out.println("Digite a altura "+i+ " : ");
+			double altura =entradaDados.nextDouble();
+			
+			pessoa[i]=new Pessoa(nome, idade, altura);
+		}
+		entradaDados.close();
+	}
+
+}
